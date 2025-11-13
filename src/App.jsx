@@ -151,7 +151,7 @@ export default function App() {
                       </div>
                       <div className="md:w-2/5">
                         <motion.img
-                          src="1.jpeg"
+                          src="/my-react-site/1.jpeg"
                           alt="Housing in Dubuque"
                           className="rounded-lg shadow-lg w-full h-auto object-cover"
                           whileHover={{ scale: 1.08, rotate: 1.5 }}
