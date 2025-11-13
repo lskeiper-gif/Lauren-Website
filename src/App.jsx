@@ -47,6 +47,43 @@ export default function App() {
       {/* MAIN APP */}
       {!showIntro && (
         <div className="flex min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 text-white">
+
+          {/* Mobile Dropdown Menu */}
+            <div className="md:hidden p-4">
+              <button
+                onClick={() => setOpen(!open)}
+                className="flex items-center gap-2 w-full py-2 px-3 bg-white/20 rounded-lg"
+              >
+                {open ? <ChevronDown /> : <ChevronRight />}
+                <span>Menu</span>
+              </button>
+
+              <AnimatePresence>
+                {open && (
+                  <motion.ul
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: "auto" }}
+                    exit={{ opacity: 0, height: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="mt-3 space-y-2"
+                  >
+                    {sidebarItems.map((item) => (
+                      <li
+                        key={item.id}
+                        className="cursor-pointer bg-white/10 px-3 py-2 rounded-md"
+                        onClick={() => {
+                          handleSelect(item.id);
+                          setOpen(false); // close menu after selecting
+                      }}
+                    >
+                      {item.label}
+                    </li>
+                  ))}
+                </motion.ul>
+              )}
+            </AnimatePresence>
+          </div>
+
           {/* Sidebar */}
           <motion.aside
             initial={{ x: -250 }}
