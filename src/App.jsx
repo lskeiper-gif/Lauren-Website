@@ -59,77 +59,37 @@ export default function App() {
           </div>
 
           {/* MOBILE SLIDE-IN MENU */}
-<AnimatePresence>
-  {open && (
-    <motion.div
-      initial={{ x: -300 }}
-      animate={{ x: 0 }}
-      exit={{ x: -300 }}
-      transition={{ type: "spring", stiffness: 200, damping: 20 }}
-      className="fixed top-0 left-0 w-64 h-full bg-white/10 backdrop-blur-xl p-6 z-50 shadow-xl"
+{open && (
+  <motion.div
+    initial={{ x: -300 }}
+    animate={{ x: 0 }}
+    exit={{ x: -300 }}
+    transition={{ duration: 0.3 }}
+    className="md:hidden fixed top-0 left-0 bottom-0 w-64 bg-white/10 backdrop-blur-xl border-r border-white/20 p-6 z-50"
+  >
+    <button
+      onClick={() => setOpen(false)}
+      className="mb-4 p-2 bg-white/20 rounded-lg"
     >
-      <button
-        onClick={() => setOpen(false)}
-        className="mb-6 flex items-center gap-2"
-      >
-        <ChevronLeft /> Close
-      </button>
+      <ChevronLeft size={24} />
+    </button>
 
-      <ul className="space-y-3">
-        {sidebarItems.map((item) => (
-          <li
-            key={item.id}
-            onClick={() => {
-              handleSelect(item.id);
-              setOpen(false);
-            }}
-            className="cursor-pointer p-2 rounded-lg bg-white/10 hover:bg-white/20"
-          >
-            {item.label}
-          </li>
-        ))}
-      </ul>
-    </motion.div>
-  )}
-</AnimatePresence>
-
-
-          {/* Fixed Mobile menu navbar */}
-            {/*<div className="md:hidden fixed top-0 left-0 right-0 z-40 p-4 bg-white/10 backdrop-blur-lg border-b border-white/20">
-              <button
-                onClick={() => setOpen(!open)}
-                className="flex items-center gap-2 w-full py-2 px-3 bg-white/20 rounded-lg"
-              >
-                {open ? <ChevronDown /> : <ChevronRight />}
-                <span>Menu</span>
-              </button>
-
-              <AnimatePresence>
-                {open && (
-                  <motion.ul
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: "auto" }}
-                    exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="mt-3 space-y-2"
-                  >
-                    {sidebarItems.map((item) => (
-                      <li
-                        key={item.id}
-                        className="cursor-pointer bg-white/10 px-3 py-2 rounded-md"
-                        onClick={() => {
-                          handleSelect(item.id);
-                          setOpen(false); // close menu after selecting
-                      }}
-                    >
-                      {item.label}
-                    </li>
-                  ))}
-                </motion.ul>
-              )}
-            </AnimatePresence>
-        </div> */}
-
+    <ul className="space-y-3">
+      {sidebarItems.map((item) => (
+        <li
+          key={item.id}
+          onClick={() => {
+            handleSelect(item.id);
+            setOpen(false);
+          }}
+          className="p-2 rounded-lg hover:bg-white/20"
+        >
+          {item.label}
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+)}
           {/* Sidebar */} 
           <motion.aside
             initial={{ x: -250 }}
