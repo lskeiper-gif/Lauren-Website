@@ -1200,7 +1200,7 @@ function WordByWordText() {
   }, [index, text]);
 
   return (
-    <div className="text-5xl md:text-6xl font-serif text-white text-center tracking-wide">
+    <div className="text-4xl md:text-6xl font-serif text-white text-center tracking-wide">
       <motion.span
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
