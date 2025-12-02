@@ -204,41 +204,7 @@ export default function App() {
                     </div>
                   </ScrollReveal>
 
-                              {/* SECTION 3: Insurance */}
-              <ScrollReveal delay={0.2}>
-                <div className="flex flex-col md:flex-row items-start gap-8">
-                  <div className="md:w-3/5 leading-relaxed">
-                    <h2 className="text-2xl font-bold mb-3">
-                      Health Insurance and Disability Coverage
-                    </h2>
-                    <p>
-                      <br /> Losing job-based insurance can feel overwhelming,
-                      but several programs exist to help maintain continuous
-                      health coverage. Through the{" "}
-                      <b>Health Insurance Marketplace</b>, individuals can
-                      enroll in a new plan during a{" "}
-                      <b>Special Enrollment Period</b> triggered by job loss.
-                      <br /> <br /> It’s important to apply within{" "}
-                      <b>60 days</b> of losing coverage to avoid a lapse in
-                      benefits. Many applicants also qualify for premium tax
-                      credits or financial assistance based on income. For those
-                      who recently left employment with a company of 20 or more
-                      employees, <b>COBRA</b> offers the option to continue
-                      their existing plan temporarily, ensuring uninterrupted
-                      access to essential care.
-                    </p>
-                  </div>
-                  <div className="md:w-2/5">
-                    <motion.img
-                      src="3.jpeg"
-                      alt="Insurance Coverage"
-                      className="rounded-lg shadow-lg w-full h-auto object-cover"
-                      whileHover={{ scale: 1.08, rotate: 1.5 }}
-                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
-                    />
-                  </div>
-                </div>
-              </ScrollReveal>
+                    
 
                 {/* SECTION 4: Disability Options */}
               <ScrollReveal delay={0.2}> 
@@ -547,7 +513,7 @@ export default function App() {
                           <b>The Jule Employment and Disability Program</b>{" "}
                           provides job training and supportive resources to help
                           individuals regain independence and stability.
-                        </p>
+                        </p> <br />
                       </div>
                       <div className="md:w-2/5">
                         <motion.img
@@ -564,7 +530,7 @@ export default function App() {
                       </div>
                     </div>
                   </ScrollReveal>
-                  
+
     {/* 1️⃣ Housing Assistance */}
     <ScrollReveal delay={0.1}>
       <div className="flex flex-col md:flex-row items-start gap-6">
@@ -850,6 +816,41 @@ export default function App() {
 )}
       {activeSection === "healthcare" && (
   <Section key="healthcare" title="Further Healthcare 💊">
+          {/* SECTION 3: Insurance */}
+              <ScrollReveal delay={0.2}>
+                <div className="flex flex-col md:flex-row items-start gap-8">
+                  <div className="md:w-3/5 leading-relaxed">
+                    <h2 className="text-2xl font-bold mb-3">
+                      Health Insurance and Disability Coverage
+                    </h2>
+                    <p>
+                      <br /> Losing job-based insurance can feel overwhelming,
+                      but several programs exist to help maintain continuous
+                      health coverage. Through the{" "}
+                      <b>Health Insurance Marketplace</b>, individuals can
+                      enroll in a new plan during a{" "}
+                      <b>Special Enrollment Period</b> triggered by job loss.
+                      <br /> <br /> It’s important to apply within{" "}
+                      <b>60 days</b> of losing coverage to avoid a lapse in
+                      benefits. Many applicants also qualify for premium tax
+                      credits or financial assistance based on income. For those
+                      who recently left employment with a company of 20 or more
+                      employees, <b>COBRA</b> offers the option to continue
+                      their existing plan temporarily, ensuring uninterrupted
+                      access to essential care.
+                    </p>
+                  </div>
+                  <div className="md:w-2/5">
+                    <motion.img
+                      src="3.jpeg"
+                      alt="Insurance Coverage"
+                      className="rounded-lg shadow-lg w-full h-auto object-cover"
+                      whileHover={{ scale: 1.08, rotate: 1.5 }}
+                      transition={{ type: "spring", stiffness: 200, damping: 10 }}
+                    />
+                  </div>
+                </div>
+              </ScrollReveal>
     {/* 🏥 PHYSICAL HEALTH SERVICES */}
 <ScrollReveal delay={0.1}>
   <h2 className="text-2xl font-bold mb-3">Physical Health Care Services</h2>
