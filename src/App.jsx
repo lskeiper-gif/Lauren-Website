@@ -171,46 +171,6 @@ export default function App() {
                   className="space-y-32"
                 >
                   {/* HOUSING SECTION */}
-                  <ScrollReveal delay={0}>
-                    <div className="flex flex-col md:flex-row items-start gap-8">
-                      <div className="md:w-3/5 leading-relaxed">
-                        <motion.h2
-                          whileHover={{ scale: 1.05, color: "#8d1377" }}
-                          transition={{ duration: 0.3 }}
-                          className="text-2xl font-bold mb-3"
-                        >
-                          Housing in Dubuque (Section 8 Info)
-                        </motion.h2>
-                        <p>
-                          <br /> Finding stable housing can be challenging,
-                          especially when faced with financial hardship or
-                          medical needs. The city of Dubuque offers several
-                          programs that accommodate individuals eligible for
-                          Section 8 housing and other rental support services.
-                          If you or someone you know is in need of immediate
-                          housing assistance, you can call <b>211</b> for direct
-                          help and referrals. For those seeking to improve their
-                          employability or adapt to disabilities,{" "}
-                          <b>The Jule Employment and Disability Program</b>{" "}
-                          provides job training and supportive resources to help
-                          individuals regain independence and stability.
-                        </p>
-                      </div>
-                      <div className="md:w-2/5">
-                        <motion.img
-                          src="1.jpeg"
-                          alt="Housing in Dubuque"
-                          className="rounded-lg shadow-lg w-full h-auto object-cover"
-                          whileHover={{ scale: 1.08, rotate: 1.5 }}
-                          transition={{
-                            type: "spring",
-                            stiffness: 200,
-                            damping: 10,
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </ScrollReveal>
 
                   {/* TBI SECTION */}
                   <ScrollReveal delay={0.4}>
@@ -563,6 +523,48 @@ export default function App() {
 
               {activeSection === "housing" && (
   <Section key="housing" title="Housing Resources 🏠">
+
+     <ScrollReveal delay={0}>
+                    <div className="flex flex-col md:flex-row items-start gap-8">
+                      <div className="md:w-3/5 leading-relaxed">
+                        <motion.h2
+                          whileHover={{ scale: 1.05, color: "#8d1377" }}
+                          transition={{ duration: 0.3 }}
+                          className="text-2xl font-bold mb-3"
+                        >
+                          Housing in Dubuque (Section 8 Info)
+                        </motion.h2>
+                        <p>
+                          <br /> Finding stable housing can be challenging,
+                          especially when faced with financial hardship or
+                          medical needs. The city of Dubuque offers several
+                          programs that accommodate individuals eligible for
+                          Section 8 housing and other rental support services.
+                          If you or someone you know is in need of immediate
+                          housing assistance, you can call <b>211</b> for direct
+                          help and referrals. For those seeking to improve their
+                          employability or adapt to disabilities,{" "}
+                          <b>The Jule Employment and Disability Program</b>{" "}
+                          provides job training and supportive resources to help
+                          individuals regain independence and stability.
+                        </p>
+                      </div>
+                      <div className="md:w-2/5">
+                        <motion.img
+                          src="1.jpeg"
+                          alt="Housing in Dubuque"
+                          className="rounded-lg shadow-lg w-full h-auto object-cover"
+                          whileHover={{ scale: 1.08, rotate: 1.5 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 200,
+                            damping: 10,
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </ScrollReveal>
+                  
     {/* 1️⃣ Housing Assistance */}
     <ScrollReveal delay={0.1}>
       <div className="flex flex-col md:flex-row items-start gap-6">
