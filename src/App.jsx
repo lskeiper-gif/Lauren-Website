@@ -875,7 +875,7 @@ export default function App() {
                       employees, <b>COBRA</b> offers the option to continue
                       their existing plan temporarily, ensuring uninterrupted
                       access to essential care. <br />
-                    </p>
+                    </p> <br />
                   </div><br />
                   <div className="md:w-2/5">
                     <motion.img
