@@ -874,9 +874,9 @@ export default function App() {
                       who recently left employment with a company of 20 or more
                       employees, <b>COBRA</b> offers the option to continue
                       their existing plan temporarily, ensuring uninterrupted
-                      access to essential care.
+                      access to essential care. <br />
                     </p>
-                  </div>
+                  </div><br />
                   <div className="md:w-2/5">
                     <motion.img
                       src="3.jpeg"
