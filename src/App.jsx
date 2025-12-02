@@ -170,6 +170,43 @@ export default function App() {
                   transition={{ duration: 0.6 }}
                   className="space-y-32"
                 >
+                   {/* TBI SECTION */}
+                  <ScrollReveal delay={0.4}>
+                    <div className="flex flex-col md:flex-row items-start gap-8">
+                      <div className="md:w-3/5 leading-relaxed">
+                        <h2 className="text-2xl font-bold mb-3">
+                          Traumatic Brain Injury Guide
+                        </h2>
+                        <p>
+                          <br />
+                          Have you experienced a traumatic brain injury? Worried or 
+                          confused about where to go next? This website is designed to
+                           be a guide to assist you through this time. Experiencing a 
+                           traumatic brain injury can impact life greatly. It could cause 
+                           a limited capacity to work or could stop work altogether. There 
+                           may be questions you have about what next steps in terms of care
+                           are and options that could assist you during this time. There are
+                           limited resources available for those who have experienced traumatic
+                           brain injuries and this website is merely a first step to providing
+                           some resources. <br />
+                        </p>
+                      </div>
+                      <div className="md:w-2/5">
+                        <motion.img
+                          src="111.png"
+                          alt="Immediate Care"
+                          className="rounded-lg shadow-lg w-full h-auto object-cover"
+                          whileHover={{ scale: 1.08, rotate: 1.5 }}
+                          transition={{
+                            type: "spring",
+                            stiffness: 200,
+                            damping: 10,
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </ScrollReveal>
+
                   {/* HOUSING SECTION */}
 
                   {/* TBI SECTION */}
